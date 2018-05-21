@@ -33,6 +33,11 @@ request(args[0], { json: true }, (err, res, html) => {
     });
     data.variants.push(variantData);
   });
+  // pics
+  data.pics = [];
+  $(html).find('.image-thumb-list').children().each((i, li) => {
+    data.pics.push($(li).find('img').attr('src'));
+  })
   console.log(JSON.stringify(data));
 
 });
