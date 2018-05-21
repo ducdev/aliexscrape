@@ -18,5 +18,11 @@
   "bugs": {
     "url": "https://github.com/ducdev/aliexpress-scrapper/issues"
   },
-  "homepage": "https://github.com/ducdev/aliexpress-scrapper#readme"
+  "homepage": "https://github.com/ducdev/aliexpress-scrapper#readme",
+  "bin": {
+    "scrape": "./cli.js"
+  },
+  "dependencies": {
+    "request": "^2.87.0"
+  }
 }
