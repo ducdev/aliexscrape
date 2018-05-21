@@ -1,0 +1,22 @@
+{
+  "name": "aliexpress-scrapper",
+  "version": "1.0.0",
+  "description": "Get Aliexpress product details in JSON",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/ducdev/aliexpress-scrapper.git"
+  },
+  "keywords": [
+    "aliexpress"
+  ],
+  "author": "ducdev",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ducdev/aliexpress-scrapper/issues"
+  },
+  "homepage": "https://github.com/ducdev/aliexpress-scrapper#readme"
+}
