@@ -13,7 +13,7 @@ $ npm i --save aliexpress-scrapper
 ```
 import aliexpressScrapper from 'aliexpress-scrapper';
 
-or
+// or
 
 var aliexpressScrapper = require('aliexpress-scrapper');
 

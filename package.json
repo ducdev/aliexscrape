@@ -1,6 +1,6 @@
 {
   "name": "aliexpress-scrapper",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Get Aliexpress product details in JSON",
   "main": "index.js",
   "scripts": {
@@ -11,7 +11,13 @@
     "url": "git+ssh://git@github.com/ducdev/aliexpress-scrapper.git"
   },
   "keywords": [
-    "aliexpress"
+    "aliexpress",
+    "aliexpress-crawler",
+    "aliexpress-spider",
+    "aliexpress-api",
+    "dropship",
+    "dropshipping",
+    "aliexpress-scrapper"
   ],
   "author": "ducdev",
   "license": "MIT",
