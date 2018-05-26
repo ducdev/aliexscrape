@@ -25,6 +25,9 @@ aliexpressScrapper('32853590425') // 32853590425 is a productId
 ### Command-line usage
 
 ```sh
+$ git clone git@github.com:ducdev/aliexpress-scrapper.git
+$ cd aliexpress-scrapper
+$ npm install
 $ npm link
 $ scrape 32853590425
 ```
