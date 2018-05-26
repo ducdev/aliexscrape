@@ -62,7 +62,7 @@ const aliexpressScrapper = (productId) => {
     // description
     .then(response => {
       const $ = cheerio.load(response);
-      const wrapped = $(response);
+      const wrapped = $(`<div>${response}</div>`);
       wrapped.find('kse\\:widget').remove(); // remove <kse:widget> tag
       data.description = wrapped.html();
       return JSON.stringify(data);
