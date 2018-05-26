@@ -47,6 +47,10 @@ Want to contribute, folks? Great! PRs are welcome!
  - Fix known bugs
  - Make some improvements/optimizations
 
+### Try on Runkit
+
+[![Try aliexpress-scrapper on RunKit](https://badge.runkitcdn.com/aliexpress-scrapper.svg)](https://npm.runkit.com/aliexpress-scrapper)
+
 License
 ----
 
