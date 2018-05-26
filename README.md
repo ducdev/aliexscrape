@@ -4,13 +4,13 @@ Get Aliexpress product details in JSON
 
 ### Installation
 
-```
+```sh
 $ npm i --save aliexpress-scrapper
 ```
 
 ### Usage
 
-```
+```js
 import aliexpressScrapper from 'aliexpress-scrapper';
 
 // or
@@ -24,7 +24,7 @@ aliexpressScrapper('32853590425') // 32853590425 is a productId
 
 ### Command-line usage
 
-```
+```sh
 $ npm link
 $ scrape 32853590425
 ```
