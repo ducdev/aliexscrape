@@ -55,6 +55,14 @@ const aliexpressScrapper = (productId) => {
         data.pricing.push(pricingData);
       })
       // freight, get real-time here => https://freight.aliexpress.com/ajaxFreightCalculateService.htm?productid=32830803458&count=1&currencyCode=USD&country=TH
+      // specs
+      data.specs = [];
+      $(response).find('ul.product-property-list.util-clearfix > li').each((i, li) => {
+        data.specs.push({
+          propertyTitle: $(li).find('span.propery-title').text(),
+          propertyDescription: $(li).find('span.propery-des').text(),
+        });
+      });
       // description
       const descriptionSource = /window.runParams.detailDesc="(.*)";/.exec(response)[1];
       return rp(descriptionSource);
