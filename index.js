@@ -64,6 +64,7 @@ const aliexpressScrapper = (productId) => {
       const $ = cheerio.load(response);
       const wrapped = $(`<div>${response}</div>`);
       wrapped.find('kse\\:widget').remove(); // remove <kse:widget> tag
+      wrapped.find('div:has(div:has(div:has(div:has(div:has(a)))))').remove(); // remove related products widgets like 32831471018
       data.description = wrapped.html();
       return JSON.stringify(data);
     })
