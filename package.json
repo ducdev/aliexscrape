@@ -1,6 +1,6 @@
 {
-  "name": "aliexpress-scrapper",
-  "version": "1.0.7",
+  "name": "aliexscrape",
+  "version": "1.0.0",
   "description": "Get Aliexpress product details in JSON",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/ducdev/aliexpress-scrapper.git"
+    "url": "git+ssh://git@github.com/ducdev/aliexscrape.git"
   },
   "keywords": [
     "aliexpress",
@@ -17,14 +17,17 @@
     "aliexpress-api",
     "dropship",
     "dropshipping",
-    "aliexpress-scrapper"
+    "aliexpress-scraper"
+    "scraper",
+    "crawler",
+    "spider"
   ],
   "author": "ducdev",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ducdev/aliexpress-scrapper/issues"
+    "url": "https://github.com/ducdev/aliexscrape/issues"
   },
-  "homepage": "https://github.com/ducdev/aliexpress-scrapper#readme",
+  "homepage": "https://github.com/ducdev/aliexscrape#readme",
   "bin": {
     "scrape": "./cli.js"
   },

@@ -1,7 +1,7 @@
 const rp = require('request-promise');
 const cheerio = require('cheerio');
 
-const aliexpressScrapper = (productId) => {
+const AliexScrape = (productId) => {
   const data = {};
   return rp(`https://www.aliexpress.com/item/xxx/${productId}.html`)
     .then(response => {
@@ -81,4 +81,4 @@ const aliexpressScrapper = (productId) => {
     });
 }
 
-module.exports = aliexpressScrapper;
+module.exports = AliexScrape;

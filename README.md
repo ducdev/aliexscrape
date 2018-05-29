@@ -1,23 +1,23 @@
-# aliexpress-scrapper
+# aliexscrape
 
 Get Aliexpress product details in JSON
 
 ### Installation
 
 ```sh
-$ npm i --save aliexpress-scrapper
+$ npm i --save aliexscrape
 ```
 
 ### Usage
 
 ```js
-import aliexpressScrapper from 'aliexpress-scrapper';
+import AliexScrape from 'aliexscrape';
 
 // or
 
-var aliexpressScrapper = require('aliexpress-scrapper');
+var AliexScrape = require('aliexscrape');
 
-aliexpressScrapper('32853590425') // 32853590425 is a productId
+AliexScrape('32853590425') // 32853590425 is a productId
     .then(response => console.log(response))
     .catch(error => console.log(error));
 ```
@@ -25,8 +25,8 @@ aliexpressScrapper('32853590425') // 32853590425 is a productId
 ### Command-line usage
 
 ```sh
-$ git clone git@github.com:ducdev/aliexpress-scrapper.git
-$ cd aliexpress-scrapper
+$ git clone git@github.com:ducdev/aliexscrape.git
+$ cd aliexscrape
 $ npm install
 $ npm link
 $ scrape 32853590425
@@ -49,7 +49,7 @@ Want to contribute, folks? Great! PRs are welcome!
 
 ### Try on Runkit
 
-[![Try aliexpress-scrapper on RunKit](https://badge.runkitcdn.com/aliexpress-scrapper.svg)](https://npm.runkit.com/aliexpress-scrapper)
+[![Try aliexscrape on RunKit](https://badge.runkitcdn.com/aliexscrape.svg)](https://npm.runkit.com/aliexscrape)
 
 License
 ----
