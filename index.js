@@ -37,7 +37,7 @@ const AliexScrape = (productId) => {
       // pics
       data.pics = [];
       $(response).find('.image-thumb-list').children().each((i, li) => {
-        data.pics.push($(li).find('img').attr('src'));
+        data.pics.push($(li).find('img').attr('src').replace(/.jpg(.*).jpg/, '.jpg'));
       })
       // pricing
       data.pricing = [];
@@ -58,7 +58,7 @@ const AliexScrape = (productId) => {
       // properties
       data.properties = [];
       $(response).find('ul.product-property-list.util-clearfix > li').each((i, li) => {
-        data.specs.push({
+        data.properties.push({
           propertyTitle: $(li).find('span.propery-title').text(),
           propertyDescription: $(li).find('span.propery-des').text(),
         });
