@@ -45,7 +45,7 @@ const AliexScrape = (productId) => {
       const rawPricing = JSON.parse(pricingJSON);
       rawPricing.map(pricing => {
         const pricingData = {
-          singlePricing: pricing.skuVal.actSkuCalPrice,
+          singlePricing: pricing.skuVal.actSkuCalPrice || pricing.skuVal.skuCalPrice,
           bulkPricing: pricing.skuVal.actSkuBulkCalPrice,
           bulkOrder: pricing.skuVal.bulkOrder,
         }
