@@ -55,8 +55,8 @@ const AliexScrape = (productId) => {
         data.pricing.push(pricingData);
       })
       // freight, get real-time here => https://freight.aliexpress.com/ajaxFreightCalculateService.htm?productid=32830803458&count=1&currencyCode=USD&country=TH
-      // specs
-      data.specs = [];
+      // properties
+      data.properties = [];
       $(response).find('ul.product-property-list.util-clearfix > li').each((i, li) => {
         data.specs.push({
           propertyTitle: $(li).find('span.propery-title').text(),
