@@ -22,7 +22,7 @@ const AliexScrape = (productId) => {
             attributeData.options.push({
               optionId: `${$(child).find('ul').attr('data-sku-prop-id')}:${$(li).find('a').attr('data-sku-id')}`,
               src: optionTag.attribs.src,
-              title: optionTag.attribs.title,
+              text: optionTag.attribs.title,
               bigpic: optionTag.attribs.bigpic,
             });
           } else if (optionTag.name === 'span') {
