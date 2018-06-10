@@ -14,7 +14,7 @@ const AliexScrape = (productId) => {
       data.attributes = [];
       $(response).find('#j-product-info-sku').children().each((i, child) => {
         const attributeData = {};
-        attributeData.title = $(child).find('.p-item-title').text();
+        attributeData.title = $(child).find('.p-item-title').text().replace(':', '');
         attributeData.options = [];
         $(child).find('ul').children().each((i, li) => {
           const optionTag = $(li).find('a').children()[0];
