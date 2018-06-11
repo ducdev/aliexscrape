@@ -73,7 +73,7 @@ const AliexScrape = (productId) => {
       const wrapped = $(`<div>${response}</div>`);
       wrapped.find('kse\\:widget').remove(); // remove <kse:widget> tag
       wrapped.find('div:has(div:has(div:has(div:has(div:has(a)))))').remove(); // remove related products widgets like 32831471018
-      data.description = wrapped.html();
+      data.description = wrapped.html().replace(/(https?:\/\/(.+?\.)?aliexpress\.com(\/[A-Za-z0-9\-\._~:\/\?#\[\]@!$&'\(\)\*\+,;\=]*)?)/g, '#'); // replace all existing aliexpress urls in description to #
       return JSON.stringify(data);
     })
     .catch((error) => {
