@@ -59,7 +59,7 @@ const AliexScrape = (productId) => {
       data.properties = [];
       $(response).find('ul.product-property-list.util-clearfix > li').each((i, li) => {
         data.properties.push({
-          propertyTitle: $(li).find('span.propery-title').text(),
+          propertyTitle: $(li).find('span.propery-title').text().replace(':', ''),
           propertyDescription: $(li).find('span.propery-des').text(),
         });
       });
