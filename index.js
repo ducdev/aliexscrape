@@ -21,9 +21,8 @@ const AliexScrape = (productId) => {
           if (optionTag.name === 'img') {
             attributeData.options.push({
               optionId: `${$(child).find('ul').attr('data-sku-prop-id')}:${$(li).find('a').attr('data-sku-id')}`,
-              src: optionTag.attribs.src,
+              src: optionTag.attribs.src.replace(/.jpg(.*).jpg/, '.jpg'),
               text: optionTag.attribs.title,
-              bigpic: optionTag.attribs.bigpic,
             });
           } else if (optionTag.name === 'span') {
             attributeData.options.push({
@@ -44,20 +43,19 @@ const AliexScrape = (productId) => {
       $(response).find('.image-thumb-list').children().each((i, li) => {
         data.pics.push($(li).find('img').attr('src').replace(/.jpg(.*).jpg/, '.jpg'));
       })
-      // pricing
-      data.pricing = [];
-      const pricingJSON = /var.skuProducts=(.*);/.exec(response)[1];
-      const rawPricing = JSON.parse(pricingJSON);
-      rawPricing.map(pricing => {
+      // variations
+      data.variations = [];
+      const variationsJSON = /var.skuProducts=(.*);/.exec(response)[1];
+      const rawVariations = JSON.parse(variationsJSON);
+      rawVariations.map(variation => {
         const pricingData = {
-          singlePricing: pricing.skuVal.actSkuCalPrice || pricing.skuVal.skuCalPrice,
-          bulkPricing: pricing.skuVal.actSkuBulkCalPrice,
-          bulkOrder: pricing.skuVal.bulkOrder,
+          pricing: variation.skuVal.skuCalPrice,
+          discount: variation.skuVal.actSkuCalPrice,
         }
-        if (pricing.skuAttr) {
-          pricingData.combinedAttributes = pricing.skuAttr.match(/[0-9]{1,20}:[0-9]{1,20}/g);
+        if (variation.skuAttr) {
+          pricingData.combinedAttributes = variation.skuAttr.match(/[0-9]{1,20}:[0-9]{1,20}/g);
         }
-        data.pricing.push(pricingData);
+        data.variations.push(pricingData);
       })
       // freight, get real-time here => https://freight.aliexpress.com/ajaxFreightCalculateService.htm?productid=32830803458&count=1&currencyCode=USD&country=TH
       // properties
