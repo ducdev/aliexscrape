@@ -34,6 +34,11 @@ const AliexScrape = (productId) => {
         });
         data.attributes.push(attributeData);
       });
+      // seller/store data
+      data.store = {
+        name: $(response).find('span.shop-name').find('a').text(),
+        id: $(response).find('span.shop-name').find('a').attr('href').match(/(\d+)/)[0],
+      }
       // pics
       data.pics = [];
       $(response).find('.image-thumb-list').children().each((i, li) => {
