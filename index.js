@@ -78,7 +78,7 @@ const AliexScrape = (productId) => {
       wrapped.find('link').remove(); // remove <link> tag
       wrapped.find('style').remove(); // remove <style> tag
       wrapped.find('div:has(div:has(div:has(div:has(div:has(a)))))').remove(); // remove related products widgets like 32831471018
-      data.description = wrapped.html().replace(/(https?:\/\/(.+?\.)?aliexpress\.com(\/[A-Za-z0-9\-\._~:\/\?#\[\]@!$&'\(\)\*\+,;\=]*)?)/g, '#'); // replace all existing aliexpress urls in description to #
+      data.description = wrapped.html().replace(/(https?:\/\/+[a-z0-9A-Z-.]+aliexpress\.com(\/[A-Za-z0-9\-\._~:\/\?#\[\]@!$&'\(\)\*\+,;\=]*)?)/g, '#'); // replace all existing aliexpress urls in description to #
       return JSON.stringify(data);
     })
     .catch((error) => {
