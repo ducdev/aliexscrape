@@ -49,6 +49,7 @@ const AliexScrape = (productId) => {
       const rawVariations = JSON.parse(variationsJSON);
       rawVariations.map(variation => {
         const pricingData = {
+          skuAttr: variation.skuAttr,
           pricing: variation.skuVal.skuCalPrice,
           discount: variation.skuVal.actSkuCalPrice,
         }
