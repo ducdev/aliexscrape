@@ -1,6 +1,6 @@
 {
   "name": "aliexscrape",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "Get Aliexpress product details in JSON",
   "main": "index.js",
   "scripts": {
